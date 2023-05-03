@@ -83,7 +83,7 @@ public:
 
         bool color_changed = false;
         
-        if (color_changed |= (ImGui::ColorEdit3("Color1", m_Colors) | ImGui::ColorPicker3("Color", m_Colors)))
+        if (color_changed |= (ImGui::ColorEdit3("Color1", m_Colors) | ImGui::ColorPicker3("Color", m_Colors))) // Undefined behaviour, need to be changed
         {
             m_RGBW.red        = m_Colors[0] * 255.f;
             m_RGBW.green      = m_Colors[1] * 255.f;
